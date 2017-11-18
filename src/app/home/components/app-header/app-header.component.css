@@ -1,0 +1,10 @@
+header {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  background-color: aliceblue;
+}
+
+header > img {
+  max-width: 200px;
+}

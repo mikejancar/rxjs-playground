@@ -1,0 +1,22 @@
+nav {
+  width: 200px;
+  background-color: aliceblue;
+}
+
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+li {
+  padding: 15px 25px;
+  font-family: 'Signika';
+  font-size: 1.25em;
+  text-align: center;
+}
+
+li:hover {
+  background: lightsteelblue;
+  cursor: pointer;
+}
