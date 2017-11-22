@@ -1,0 +1,18 @@
+.subject-row {
+  display: flex;
+  align-items: center;
+}
+
+.subject-row > .value {
+  width: 100px;
+  font-size: 1.25em;
+  margin-right: 25px;
+  text-align: center;
+}
+
+.subject-row > .buttons {
+  display: flex;
+  width: 300px;
+  align-items: center;
+  justify-content: space-around;
+}

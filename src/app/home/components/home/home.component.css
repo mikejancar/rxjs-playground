@@ -1,0 +1,9 @@
+section {
+  position: fixed;
+  left: 200px;
+  top: 100px;
+  padding: 5px;
+  background-color: lightsteelblue;
+  width: calc(100% - 200px);
+  height: calc(100vh - 100px);
+}
