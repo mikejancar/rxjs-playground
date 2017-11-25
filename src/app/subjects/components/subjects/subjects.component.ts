@@ -1,7 +1,6 @@
 import { Component } from '@angular/core';
+import { BehaviorSubject } from 'rxjs/BehaviorSubject';
 import { Subject } from 'rxjs/Subject';
-import { Observable } from 'rxjs/Observable';
-import 'rxjs/add/operator/takeUntil';
 
 import { ObservableFactoryService } from '../../../core';
 
@@ -11,20 +10,13 @@ import { ObservableFactoryService } from '../../../core';
 })
 export class SubjectsComponent {
 
-  subjectUnsubscribe: Subject<void> = new Subject<void>();
-  subjectValue: number;
+  baseSubject$: Subject<number>;
+  behaviorSubject$: BehaviorSubject<number>;
 
   constructor(
     private observableFactory: ObservableFactoryService
-  ) { }
-
-  subscribe(): void {
-    this.observableFactory.subject$
-      .takeUntil(this.subjectUnsubscribe)
-      .subscribe((num: number) => this.subjectValue = num);
-  }
-
-  unsubscribe(): void {
-    this.subjectUnsubscribe.next();
+  ) {
+    this.baseSubject$ = observableFactory.subject$;
+    this.behaviorSubject$ = observableFactory.behaviorSubject$;
   }
 }

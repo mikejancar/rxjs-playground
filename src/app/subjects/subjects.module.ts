@@ -5,6 +5,7 @@ import { CoreModule } from '../core/core.module';
 import { SharedModule } from '../shared/shared.module';
 
 import { SubjectsComponent } from './components/subjects/subjects.component';
+import { TestSubjectComponent } from './components/test-subject/test-subject.component';
 
 @NgModule({
   imports: [
@@ -13,7 +14,8 @@ import { SubjectsComponent } from './components/subjects/subjects.component';
     SharedModule
   ],
   declarations: [
-    SubjectsComponent
+    SubjectsComponent,
+    TestSubjectComponent
   ],
   exports: [
     SubjectsComponent

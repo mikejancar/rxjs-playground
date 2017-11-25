@@ -1,9 +1,4 @@
 <div rxPlayContent>
-  <div class="subject-row">
-    <span class="value">{{subjectValue}}</span>
-    <div class="buttons">
-      <button rxPlayButton (click)="subscribe()">Subscribe</button>
-      <button rxPlayButton (click)="unsubscribe()">Unsubscribe</button>
-    </div>
-  </div>
+  <rxplay-test-subject [subject]="baseSubject$"></rxplay-test-subject>
+  <rxplay-test-subject [subject]="behaviorSubject$" [subjectType]="'Behavior'"></rxplay-test-subject>
 </div>
