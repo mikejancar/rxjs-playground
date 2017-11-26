@@ -23,4 +23,8 @@ export class TestSubjectComponent {
   unsubscribe(): void {
     this.subjectUnsubscribe.next();
   }
+
+  complete(): void {
+    this.subject.complete();
+  }
 }
